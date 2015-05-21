@@ -1,0 +1,12 @@
+<template name="AppLayout">
+    <body id="wrapper">
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        {{>navigation}}
+        {{>sidebar}}
+    </nav>
+
+    <div class="workspace">
+        {{>yield}}
+    </div>
+    </body>
+</template>

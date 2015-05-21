@@ -1,0 +1,7 @@
+<template name="tasklist">
+    {{#if editing}}
+        {{>tasklistEdit editing=editing}}
+    {{else}}
+        {{>tasklistShow editing=editing}}
+    {{/if}}
+</template>
