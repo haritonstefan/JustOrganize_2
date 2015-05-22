@@ -1,11 +1,7 @@
 Meteor.publish('tasklists', function() {
-  return Tasklists.find({
-    _owner: Meteor.userId()
-  });
+  return Tasklists.find();
 });
 
 Meteor.publish('tasks', function() {
-  return Tasks.find({
-    _owner: Meteor.userId()
-  });
+  return Tasks.find();
 });

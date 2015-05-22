@@ -1,0 +1,10 @@
+<template name="tasklistShow">
+    <div class="todo-list">
+        <p>{{name}}</p>
+        <button class="add-todo">+</button>
+
+        {{#each tasks}}
+            {{>task}}
+        {{/each}}
+    </div>
+</template>

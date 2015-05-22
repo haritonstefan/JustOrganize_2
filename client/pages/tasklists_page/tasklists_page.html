@@ -1,4 +1,8 @@
 <template name="tasklistsPage">
+    <button id="new-list-button" class="btn btn-success">New List</button>
+    {{#if adding}}
+        {{>tasklistInsert}}
+    {{/if}}
     {{#each tasklists}}
         {{>tasklist}}
     {{/each}}
