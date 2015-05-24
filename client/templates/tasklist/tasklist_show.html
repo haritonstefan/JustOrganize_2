@@ -1,18 +1,13 @@
 <template name="tasklistShow">
     <div class="todo-list">
-<<<<<<< HEAD
         <p><i class="fa fa-tasks"></i> {{name}}</p>
         <div class="buttons-box">
             <button class="btn btn-info add-todo"><i class="fa fa-plus"></i> Add task</button>
         </div>
-=======
-        <p>{{name}}</p>
-        <i class="fa fa-plus" id="insertTask"></i>
         {{#if inserting}}
             <p>inserting</p>
             {{>taskInsert}}
         {{/if}}
->>>>>>> dd317982324cb5c27770e447fb39113ca3dcd8bb
 
         {{#each tasks}}
             {{>task}}
