@@ -5,10 +5,8 @@
             <i class="fa fa-trash" id="delete-tasklist-button"></i>
         </div>
         {{#if editing}}
-            <p> editing </p>
             {{>tasklistEdit}}
         {{else}}
-            <!--<p> showing </p>-->
             {{>tasklistShow}}
         {{/if}}
     </div>

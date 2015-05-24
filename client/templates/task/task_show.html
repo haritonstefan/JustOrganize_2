@@ -3,11 +3,11 @@
         <label>
             <i class="glyphicon glyphicon-tasks"></i>
             {{name}}
-            <button class="pull-right delete-todo">
+            <button class="pull-right delete-todo" id="deleteTask">
                 <i class="glyphicon glyphicon-trash"></i>
             </button>
         </label>
         <p>{{description}}</p>
-        <p>{{due}}</p>
+        <p>{{formatDate date "DD-MM-YY HH:mm"}}</p>
     </div>
 </template>

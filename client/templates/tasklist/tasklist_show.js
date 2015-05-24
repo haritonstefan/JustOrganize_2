@@ -3,14 +3,16 @@ Template.tasklistShow.created = function() {
 };
 
 Template.tasklistShow.helpers({
-  editing: function(){
+  inserting: function(){
     return Template.instance().inserting.get();
+  },
+  tasks: function(){
+    return Tasks.find({_list_id: this._id});
   }
 });
 
 Template.tasklistShow.events({
-  "click #insertTask": function(e, template) {
-    this.inserting = !this.inserting
+  "click #addTask": function(e, template) {
     template.inserting.set(!template.inserting.get());
   }
 });

@@ -1,11 +1,11 @@
 <template name="taskInsert">
-    <form id="insertTask">
-        <label for="name" class="control-label"></label>
-        <input type="text" id="name" name="description" class="form-control">
-        <label for="description" class="control-label"></label>
-        <input type="text" id="description" name="description" class="form-control">
-        <label for="due" class="control-label"></label>
-        <input type="datetime-local" id="due" name="due" class="form-control">
-        <button type="submit" class="form-control btn btn-primary">Create</button>
-    </form>
+  {{#autoForm collection="Tasks" type="method" meteormethod="addTask" id="insertTask"}}
+    <fieldset>
+      <legend> Insert a task</legend>
+      {{>afQuickField name="name"}}
+      {{>afQuickField name="description"}}
+      {{>afQuickField name="due" type="bootstrap-datetimepicker"}}
+    </fieldset>
+    <button name="submitTask" type="submit" id="submitTask" class="form-control">Insert</button>
+  {{/autoForm}}
 </template>
