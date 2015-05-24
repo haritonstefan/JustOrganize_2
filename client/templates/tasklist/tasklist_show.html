@@ -1,7 +1,11 @@
 <template name="tasklistShow">
     <div class="todo-list">
         <p>{{name}}</p>
-        <button class="add-todo">+</button>
+        <i class="fa fa-plus" id="insertTask"></i>
+        {{#if inserting}}
+            <p>inserting</p>
+            {{>taskInsert}}
+        {{/if}}
 
         {{#each tasks}}
             {{>task}}

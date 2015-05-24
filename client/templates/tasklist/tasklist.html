@@ -2,10 +2,8 @@
     <i class="fa fa-trash" id="delete-tasklist-button"></i>
     <i class="fa fa-edit" id="edit-tasklist-button"></i>
     {{#if editing}}
-        <p> editing </p>
         {{>tasklistEdit}}
     {{else}}
-        <p> showing </p>
         {{>tasklistShow}}
     {{/if}}
 </template>
