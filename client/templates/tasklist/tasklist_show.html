@@ -2,7 +2,7 @@
     <div class="todo-list">
         <p><i class="fa fa-tasks"></i> {{name}}</p>
         {{#if inserting}}
-          {{>taskInsert data=this inserting=inserting}}
+          {{>taskInsert _id}}
         {{else}}
           <div class="buttons-box">
               <button class="btn btn-info add-todo" id="addTask"><i class="fa fa-plus"></i> Add task</button>

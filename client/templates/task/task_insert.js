@@ -2,10 +2,9 @@ AutoForm.hooks({
  insertTask: {
    before: {
      method: function (doc) {
-       var parentData = Template.parentData(1);
+       var list_id = Template.parentData(1);
        doc._owner = Meteor.userId();
-       doc._list_id = parentData.data._id;
-       parentData.inserting = !parentData.inserting;
+       doc._list_id = list_id;
        return doc;
      }
    }

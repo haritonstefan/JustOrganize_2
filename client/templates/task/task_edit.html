@@ -1,5 +1,5 @@
 <template name="taskEdit">
-    {{#autoForm collection="Tasks" id="updateTask" type='update'}}
+    {{#autoForm collection="Tasks" id="updateTask" type='update' doc=this}}
         <fieldset>
             <legend>Create a tasklist</legend>
             {{>afQuickField name='name'}}
