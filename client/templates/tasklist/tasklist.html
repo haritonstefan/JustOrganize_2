@@ -1,11 +1,15 @@
 <template name="tasklist">
-    <i class="fa fa-trash" id="delete-tasklist-button"></i>
-    <i class="fa fa-edit" id="edit-tasklist-button"></i>
-    {{#if editing}}
-        <p> editing </p>
-        {{>tasklistEdit}}
-    {{else}}
-        <p> showing </p>
-        {{>tasklistShow}}
-    {{/if}}
+    <div class="task-list-box">
+        <div class="action-buttons pull-right">
+            <i class="fa fa-edit" id="edit-tasklist-button"></i>
+            <i class="fa fa-trash" id="delete-tasklist-button"></i>
+        </div>
+        {{#if editing}}
+            <p> editing </p>
+            {{>tasklistEdit}}
+        {{else}}
+            <!--<p> showing </p>-->
+            {{>tasklistShow}}
+        {{/if}}
+    </div>
 </template>

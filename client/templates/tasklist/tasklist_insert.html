@@ -1,11 +1,13 @@
 <template name="tasklistInsert">
-    {{#autoForm collection="Tasklists" id="insertTasklist" type='insert'}}
-        <fieldset>
-            <legend>Create a tasklist</legend>
-            {{>afQuickField name='name'}}
-            {{>afQuickField name='description'}}
-            {{>afQuickField name='main' type='boolean-select'}}
-        </fieldset>
-        <button type="submit" class="btn btn-primary"> Insert </button>
-    {{/autoForm}}
+    <div class="form-box">
+        {{#autoForm collection="Tasklists" id="insertTasklist" type='insert'}}
+            <fieldset>
+                <legend>Create a tasklist</legend>
+                {{>afQuickField name='name'}}
+                {{>afQuickField name='description'}}
+                {{>afQuickField name='main' type='boolean-select'}}
+            </fieldset>
+            <button type="submit" class="btn btn-primary"> Insert </button>
+        {{/autoForm}}
+    </div>
 </template>
