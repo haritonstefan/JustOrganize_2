@@ -1,2 +1,11 @@
 <template name="taskEdit">
+    {{#autoForm collection="Tasks" id="updateTask" type='update'}}
+        <fieldset>
+            <legend>Create a tasklist</legend>
+            {{>afQuickField name='name'}}
+            {{>afQuickField name='description'}}
+            {{>afQuickField name='due' type='date'}}
+        </fieldset>
+        <button type="submit" class="btn btn-primary"> Update </button>
+    {{/autoForm}}
 </template>

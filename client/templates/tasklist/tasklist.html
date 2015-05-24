@@ -1,4 +1,5 @@
 <template name="tasklist">
+<<<<<<< HEAD
     <div class="task-list-box">
         <div class="action-buttons pull-right">
             <i class="fa fa-edit" id="edit-tasklist-button"></i>
@@ -12,4 +13,13 @@
             {{>tasklistShow}}
         {{/if}}
     </div>
+=======
+    <i class="fa fa-trash" id="delete-tasklist-button"></i>
+    <i class="fa fa-edit" id="edit-tasklist-button"></i>
+    {{#if editing}}
+        {{>tasklistEdit}}
+    {{else}}
+        {{>tasklistShow}}
+    {{/if}}
+>>>>>>> dd317982324cb5c27770e447fb39113ca3dcd8bb
 </template>

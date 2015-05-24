@@ -1,3 +1,11 @@
 <template name="tasklistEdit">
-
+    {{#autoForm collection="Tasklists" id="updateTasklist" type='update' doc=this}}
+        <fieldset>
+            <legend>Edit Tasklist</legend>
+            {{>afQuickField name='name'}}
+            {{>afQuickField name='description'}}
+            {{>afQuickField name='main' type='boolean-select'}}
+        </fieldset>
+        <button type="submit" class="btn btn-primary"> Update </button>
+    {{/autoForm}}
 </template>
