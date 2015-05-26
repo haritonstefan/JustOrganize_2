@@ -1,0 +1,56 @@
+var TransactionSchema = new SimpleSchema({
+    _id: {
+        type: String,
+        optional: true,
+        autoform: {
+            omit: true
+        }
+    },
+    _owner: {
+        type: String,
+        optional: true,
+        autoform: {
+            omit: true
+        }
+    },
+    _budget: {
+        type: String,
+        optional: true,
+        autoform: {
+            omit: true
+        }
+    },
+    name: {
+        type: String,
+        min: 3,
+        max: 30
+    },
+    ammount: {
+        type: Number
+    },
+    type: {
+        type: String
+    },
+    date: {
+        type: Date
+    }
+});
+
+Transactions = new Meteor.Collection('transactions');
+Transactions.attachSchema(TransactionSchema);
+
+Transactions.allow({
+    insert: function() {return this.userId;},
+    update: function() {return this.userId;},
+    remove: function() {return this.userId;}
+});
+
+Meteor.methods({
+    'addTransaction': function(data) {
+        data.date = new Date();
+        Transactions.insert(data);
+    },
+    'removeTransaction': function(id) {
+        Transactions.remove(id);
+    }
+});

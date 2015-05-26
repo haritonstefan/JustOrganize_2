@@ -1,0 +1,11 @@
+<template name="budgetsPage">
+    {{#each budgets}}
+        {{>budget}}
+    {{/each}}
+    {{#if adding}}
+        {{>budgetInsert}}
+    {{/if}}
+    <div class="new-budget-box">
+        <button id="new-budget-button" class="btn btn-success">New budget</button>
+    </div>
+</template>
