@@ -4,6 +4,7 @@ Template.tasklistShow.created = function() {
 
 Template.tasklistShow.helpers({
   inserting: function(){
+    this.inserting = Template.instance().inserting;
     return Template.instance().inserting.get();
   },
   tasks: function(){

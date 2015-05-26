@@ -1,0 +1,13 @@
+<template name="transactionShow">
+    <div class="transaction">
+        //Aici vreu să fie bara ceea despre care vorbeam în dreapta
+        {{#if income}}
+            <p>+</p>
+        {{else}}
+            <p>-</p>
+        {{/if}}
+    <p> {{name}} </p>
+    <p> {{ammount}} $</p>
+    <small>{{formatDate date "DD-MM-YY HH:mm"}}</small>
+    </div>
+</template>

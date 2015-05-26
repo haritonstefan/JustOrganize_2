@@ -4,15 +4,11 @@
             <label>
                 <i class="fa fa-tasks"></i> {{name}}
             </label>
-            <div class="action-buttons pull-right">
-                <i class="fa fa-edit" id="edit-tasklist-button"></i>
-                <i class="fa fa-trash" id="delete-tasklist-button"></i>
-            </div>
         </div>
         <div class="task-list-body">
             {{#if inserting}}
                 <div class="form-box">
-                    {{>taskInsert _id}}
+                    {{>taskInsert}}
                 </div>
             {{else}}
             {{/if}}

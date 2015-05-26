@@ -9,7 +9,7 @@ Template.task.helpers({
 });
 
 Template.task.events({
-  "click #editTask": function(event, template){
+  "click #toggleEdit": function(event, template){
     template.editing.set(!template.editing.get());
   }
 });

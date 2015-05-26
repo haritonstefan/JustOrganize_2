@@ -1,0 +1,10 @@
+<template name="budgetInsert">
+    {{#autoForm collection='Budgets' type='method' meteormethod='addBudget' id='insertBudget'}}
+        <fieldset>
+            {{>afQuickField name='name'}}
+            {{>afQuickField name='description'}}
+            {{>afQuickField name='main' type='boolean-select'}}
+        </fieldset>
+        <button type="submit" class="btn btn-success">Save</button>
+    {{/autoForm}}
+</template>

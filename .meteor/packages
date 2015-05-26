@@ -24,6 +24,3 @@ aldeed:autoform-bs-datetimepicker
 tsega:bootstrap3-datetimepicker@=3.1.3_3
 momentjs:moment
 bootstrap3:glyphicons
-meteoric:ionic
-meteoric:ionicons-sass
-meteoric:ionic-sass

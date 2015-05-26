@@ -1,3 +1,34 @@
 <template name="budgetShow">
-    <p>{{this}}</p>
+    <div class="budget">
+        <div class="budget-heading">
+            <label>
+                <i class="fa fa-budget"></i> {{name}}
+                <p> {{balance}} $</p>
+            </label>
+        </div>
+        <div class="budget-body">
+            {{#if inserting}}
+                <div class="form-box">
+                    {{>transactionInsert}}
+                </div>
+            {{else}}
+                <div class="buttons-box">
+                    <button class="btn btn-info add-todo" id="addTransaction"><i class="fa fa-plus"></i> Add Transaction </button>
+                </div>
+
+                <div class="incomes">
+                    <p> {{incomes_sum}}</p>
+                    {{#each incomes}}
+                        {{>transaction}}
+                    {{/each}}
+                </div>
+                <div class="expenses">
+                    <p> {{expenses_sum}} </p>
+                    {{#each expenses}}
+                        {{>transaction}}
+                    {{/each}}
+                </div>
+            {{/if}}
+        </div>
+    </div>
 </template>

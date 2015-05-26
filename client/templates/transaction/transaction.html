@@ -1,0 +1,9 @@
+<template name="transaction">
+    {{#if editing}}
+        <div class="form-box">
+            {{>transactionEdit}}
+        </div>
+    {{else}}
+        {{>transactionShow}}
+    {{/if}}
+</template>
