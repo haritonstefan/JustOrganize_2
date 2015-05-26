@@ -1,13 +1,13 @@
 <template name="taskShow">
     <div class="todo-item">
         <label>
-            <i class="glyphicon glyphicon-tasks"></i>
-            {{name}}
-            <button class="pull-right" id="deleteTask">
-                <i class="glyphicon glyphicon-trash"></i>
-            </button>
+            <strong>{{name}}</strong>
         </label>
+        <div class="action-buttons pull-right">
+            <i class="fa fa-edit" name="editTask" id="editTask"></i>
+            <i class="fa fa-trash" id="deleteTask"></i>
+        </div>
+        <small>{{formatDate date "DD-MM-YY HH:mm"}}</small>
         <p>{{description}}</p>
-        <p>{{formatDate date "DD-MM-YY HH:mm"}}</p>
     </div>
 </template>

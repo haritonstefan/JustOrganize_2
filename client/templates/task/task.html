@@ -1,9 +1,8 @@
 <template name="task">
-    <button name="editTask" id="editTask">
-      edit
-    </button>
     {{#if editing}}
-        {{>taskEdit}}
+        <div class="form-box">
+            {{>taskEdit}}
+        </div>
     {{else}}
         {{>taskShow}}
     {{/if}}

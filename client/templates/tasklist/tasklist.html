@@ -1,11 +1,9 @@
 <template name="tasklist">
     <div class="task-list-box">
-        <div class="action-buttons pull-right">
-            <i class="fa fa-edit" id="edit-tasklist-button"></i>
-            <i class="fa fa-trash" id="delete-tasklist-button"></i>
-        </div>
         {{#if editing}}
-            {{>tasklistEdit}}
+            <div class="form-box">
+                {{>tasklistEdit}}
+            </div>
         {{else}}
             {{>tasklistShow}}
         {{/if}}
