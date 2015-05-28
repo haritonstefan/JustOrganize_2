@@ -8,9 +8,7 @@ AutoForm.hooks({
         doc._budget = budget_id;
         console.log(doc);
         parentData.inserting.set(!parentData.inserting.get());
-        if (AutoForm.validateForm(insertTransaction)) {
           Meteor.call('addTransaction', doc);
-        }
         return doc;
       }
     }

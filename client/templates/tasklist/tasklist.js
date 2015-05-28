@@ -4,6 +4,7 @@ Template.tasklist.created = function(){
 
 Template.tasklist.helpers({
   editing: function() {
+    this.editing = Template.instance().editing;
     return Template.instance().editing.get();
   }
 });
