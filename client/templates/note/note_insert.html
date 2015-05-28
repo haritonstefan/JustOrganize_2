@@ -1,0 +1,10 @@
+<template name="noteInsert">
+  {{#autoForm collection="Notes" type="method" meteormethod="addNote" id="insertNote"}}
+    <fieldset>
+      <legend>Create a note</legend>
+      {{>afQuickField name="name"}}
+      {{>afQuickField name="content" type="textarea"}}
+    </fieldset>
+    <button type="submit" class="btn btn-primary" id="insertNote">Create</button>
+  {{/autoForm}}
+</template>

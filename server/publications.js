@@ -13,3 +13,11 @@ Meteor.publish('budgets', function () {
 Meteor.publish('transactions', function() {
   return Transactions.find({_owner: this.userId});
 });
+
+Meteor.publish('notebooks', function () {
+  return Notebooks.find({_owner: this.userId});
+});
+
+Meteor.publish('notes', function () {
+  return Notes.find({_owner: this.userId});
+});

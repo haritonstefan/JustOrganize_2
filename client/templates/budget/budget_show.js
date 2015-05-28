@@ -4,17 +4,18 @@ Template.budgetShow.created = function() {
 
 Template.budgetShow.helpers({
   'inserting': function() {
+    this.inserting = Template.instance().inserting;
     return Template.instance().inserting.get();
   },
   'incomes': function() {
     return Transactions.find({
-      _budget_id: this._id,
+      _budget: this._id,
       type: '+'
     });
   },
   'expenses': function () {
     return Transactions.find({
-      _budget_id: this._id,
+      _budget: this._id,
       type: '-'
     });
   }

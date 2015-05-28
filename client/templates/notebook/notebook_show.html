@@ -1,0 +1,23 @@
+<template name="notebookShow">
+  <div class="notebook">
+    <div class="notebook-heading">
+      <label>
+        <i class="fa fa-note"></i> {{name}}
+      </label>
+    </div>
+    <div class="notebook-body">
+      {{#if inserting}}
+        <div class="form-box">
+          {{>noteInsert}}
+        </div>
+      {{else}}
+      {{/if}}
+      {{#each notes}}
+        {{>note}}
+      {{/each}}
+      <div class="buttons-box">
+        <button class="btn btn-info add-note" id="addNote"><i class="fa fa-plus"></i> Add note</button>
+      </div>
+    </div>
+  </div>
+</template>

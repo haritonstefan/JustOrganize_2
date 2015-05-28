@@ -1,5 +1,5 @@
 <template name="budgetShow">
-    <div class="budget">
+  <div class="budget" style="max-width: 500px">
         <div class="budget-heading">
             <label>
                 <i class="fa fa-budget"></i> {{name}}
@@ -16,13 +16,13 @@
                     <button class="btn btn-info add-todo" id="addTransaction"><i class="fa fa-plus"></i> Add Transaction </button>
                 </div>
 
-                <div class="incomes">
+              <div class="incomes pull-left">
                     <p> {{incomes_sum}}</p>
                     {{#each incomes}}
                         {{>transaction}}
                     {{/each}}
                 </div>
-                <div class="expenses">
+              <div class="expenses pull-right">
                     <p> {{expenses_sum}} </p>
                     {{#each expenses}}
                         {{>transaction}}

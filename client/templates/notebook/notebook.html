@@ -1,0 +1,13 @@
+<template name="notebook">
+  <div class="new-notebook-box">
+    <div class="action-buttons pull-right">
+      <i class="fa fa-edit" id="edit-notebook-button"></i>
+      <i class="fa fa-trash" id="delete-notebook-button"></i>
+    </div>
+    {{#if editing}}
+      {{>notebookEdit}}
+    {{else}}
+      {{>notebookShow}}
+    {{/if}}
+  </div>
+</template>

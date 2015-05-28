@@ -1,11 +1,13 @@
 <template name="transactionInsert">
-    {{#autoForm collection="Transactions" type="method" meteormethod="addTransaction" id="transactionInsert"}}
-        <fieldset>
-            <legend> Insert a transaction </legend>
-            {{>afQuickField name="name"}}
-            {{>afQuickField name="ammount" type="number"}}
-            {{>afQuickField name="type" options=transactionTypes}}
-        </fieldset>
-        <button name="submitTransaction" type="submit" id="submitTransaction" class="btn btn-success form-control">Insert</button>
-    {{/autoForm}}
+  {{#autoForm collection="Transactions" type="method" meteormethod="addTransaction" id="insertTransaction"}}
+    <fieldset>
+      <legend> Insert a task</legend>
+      {{>afQuickField name="name"}}
+      {{>afQuickField name="amount"}}
+      {{>afQuickField name="type" options=transactionTypes}}
+    </fieldset>
+    <button name="submitTransaction" type="submit" id="submitTransaction" class="btn btn-success form-control">
+      Insert
+    </button>
+  {{/autoForm}}
 </template>
