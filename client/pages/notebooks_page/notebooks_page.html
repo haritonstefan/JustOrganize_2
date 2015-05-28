@@ -1,0 +1,12 @@
+<template name="notebooksPage">
+  {{#each notebooks}}
+    {{>notebook}}
+  {{/each}}
+
+  {{#if adding}}
+    {{>notebookInsert}}
+  {{/if}}
+  <div class="new-notebook-box">
+    <button id="new-notebook-button" class="btn btn-success">New Notebook</button>
+  </div>
+</template>
