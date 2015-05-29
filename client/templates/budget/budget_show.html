@@ -1,32 +1,41 @@
 <template name="budgetShow">
-  <div class="budget" style="max-width: 500px">
+  <div class="budget">
         <div class="budget-heading">
             <label>
-                <i class="fa fa-budget"></i> {{name}}
+                <i class="fa fa-money"></i> {{name}}
                 <p> {{balance}} $</p>
             </label>
+            <div class="action-buttons pull-right">
+                <i class="fa fa-credit-card" id="addTransaction"></i>
+                <i class="fa fa-edit" id="edit-budget-button"></i>
+                <i class="fa fa-trash" id="delete-budget-button"></i>
+            </div>
         </div>
         <div class="budget-body">
             {{#if inserting}}
-                <div class="form-box">
+                <div class="form-box-budget">
                     {{>transactionInsert}}
                 </div>
             {{else}}
-                <div class="buttons-box">
-                    <button class="btn btn-info add-todo" id="addTransaction"><i class="fa fa-plus"></i> Add Transaction </button>
-                </div>
-
-              <div class="incomes pull-left">
-                    <p> {{incomes_sum}}</p>
-                    {{#each incomes}}
-                        {{>transaction}}
-                    {{/each}}
-                </div>
-              <div class="expenses pull-right">
-                    <p> {{expenses_sum}} </p>
-                    {{#each expenses}}
-                        {{>transaction}}
-                    {{/each}}
+                <div class="budget-transactions">
+                    <div class="row">
+                        <div class="col-md-6 inc">
+                            <div class="incomes">
+                                <p class="heading"><i class="fa fa-plus-circle"></i> {{incomes_sum}}</p>
+                                {{#each incomes}}
+                                    {{>transaction}}
+                                {{/each}}
+                            </div>
+                        </div>
+                        <div class="col-md-6 ex">
+                            <div class="expenses">
+                                <p class="heading"><i class="fa fa-minus-circle"></i> {{expenses_sum}} </p>
+                                {{#each expenses}}
+                                    {{>transaction}}
+                                {{/each}}
+                            </div>
+                        </div>
+                    </div>
                 </div>
             {{/if}}
         </div>

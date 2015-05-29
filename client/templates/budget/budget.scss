@@ -1,0 +1,106 @@
+.budget {
+  width: 480px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #fff;
+  display: inline-block;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  vertical-align: top;
+  .budget-heading {
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+    label {
+      font-size: 18px;
+      p {
+        margin: 0;
+      }
+    }
+    i {
+      font-size: 19px;
+      vertical-align: middle;
+      cursor: pointer;
+      &.fa-trash {
+        color: #F76646;
+        margin-top: -2px;
+      }
+      &.fa-edit {
+        color: #1CB02F;
+      }
+      &.fa-credit-card {
+        color: dodgerblue;
+      }
+    }
+  }
+  .budget-body {
+    padding: 10px;
+    background: #614B3D;
+    height: 300px;
+    .budget-transactions {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      padding: 10px 20px;
+      height: 100%;
+      .inc {
+        border-right: 1px solid #ddd;
+      }
+      .inc, .ex {
+        overflow: hidden;
+        overflow-y: auto;
+        height: 245px;
+      }
+      i {
+        font-size: 18px;
+        &.fa-plus-circle {
+          color: #1CB02F;
+        }
+        &.fa-minus-circle {
+          color: #F76646;
+        }
+      }
+      .heading {
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 10px;
+      }
+      .transaction {
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+        p {
+          display: inline-block;
+        }
+        small {
+          display: block;
+          font-style: italic;
+        }
+      }
+    }
+  }
+}
+
+.form-box-budget {
+  display: inline-block;
+  width: 480px;
+  min-height: 378px;
+  vertical-align: top;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 4px;
+  background-color: #eee;
+  color: #666;
+  margin-right: 10px;
+}
+.new-budget-box {
+  width: 480px;
+  height: 378px;
+  position: relative;
+  display: inline-block;
+  button {
+    position: absolute;
+    top: 50%;
+    margin-top: -30px;
+    left: 50%;
+    margin-left: -60px;
+  }
+}
