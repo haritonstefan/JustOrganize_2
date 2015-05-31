@@ -1,5 +1,5 @@
 body {
-  background-color: #EDE6D6;
+  background-color: #B2C7D2;
 }
 
 #wrapper {
@@ -30,12 +30,16 @@ body {
   width: 330px;
   min-height: 405px;
   border: 1px solid #ccc;
-  background-color: #614B3D;
+  background-color: #003872;
   border-radius: 5px;
   vertical-align: top;
   position: relative;
   margin-bottom: 10px;
-
+  .task-btns {
+    position: absolute;
+    right: 20px;
+    top: 18px;
+  }
   i {
     font-size: 19px;
     vertical-align: middle;
