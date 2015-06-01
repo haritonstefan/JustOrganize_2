@@ -4,7 +4,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url(http://northstara.com/wp-content/uploads/2013/06/shutterstock_69697096-blur-for-web-background.jpg);
+  background-image: url(home-page.jpg);
   background-repeat: no-repeat;
   background-size: 100% auto;
   background-color: rgb(195, 184, 173);
@@ -32,8 +32,9 @@
     .home-links {
       margin-top: 40px;
       .home-l {
+        background: #2c3e50;
         display: inline-block;
-        border: 2px solid #fff;
+        //        border: 2px solid #fff;
         border-radius: 4px;
         width: 250px;
         height: 250px;
@@ -46,6 +47,7 @@
         img {
           width: 100%;
           height: auto;
+          padding: 10px;
         }
       }
     }
