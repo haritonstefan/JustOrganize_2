@@ -4,6 +4,7 @@ Template.task.created = function(){
 
 Template.task.helpers({
   editing: function() {
+    this.editing = Template.instance().editing;
     return Template.instance().editing.get();
   }
 });

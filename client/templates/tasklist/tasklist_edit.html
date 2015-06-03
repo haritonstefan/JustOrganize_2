@@ -1,12 +1,12 @@
 <template name="tasklistEdit">
-    {{#autoForm collection="Tasklists" id="updateTasklist" type='update' doc=this}}
-        <fieldset>
-            <legend>Edit Tasklist</legend>
-            {{>afQuickField name='name'}}
-            {{>afQuickField name='description'}}
-            {{>afQuickField name='main' type='boolean-select'}}
-        </fieldset>
-        <button type="submit" class="btn btn-success"> Update </button>
-      <button id="cancelEditTasklist" class="btn btn-danger"> Cancel</button>
-    {{/autoForm}}
+  {{#autoForm collection="Tasklists" id="updateTasklist" type='update' doc=this autosave=autoSaveMode}}
+    <fieldset>
+      <legend>Edit Tasklist</legend>
+      {{>afQuickField name='name'}}
+      {{>afQuickField name='description'}}
+      {{>afQuickField name='main' type='boolean-select'}}
+    </fieldset>
+    <button type="button" class="btn btn-danger" id="cancelEditTasklist"> Cancel</button>
+    <button type="submit" class="btn btn-success"> Update</button>
+  {{/autoForm}}
 </template>

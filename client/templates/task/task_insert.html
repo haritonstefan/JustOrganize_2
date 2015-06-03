@@ -1,11 +1,12 @@
 <template name="taskInsert">
-  {{#autoForm collection="Tasks" type="method" meteormethod="addTask" id="insertTask"}}
+  {{#autoForm collection="Tasks" type="insert" id="insertTask"}}
     <fieldset>
       <legend> Insert a task</legend>
       {{>afQuickField name="name"}}
       {{>afQuickField name="description"}}
       {{>afQuickField name="due" type="bootstrap-datetimepicker"}}
     </fieldset>
+    <button name="cancel" type="reset" id="cancelSubmit" class="btn btn-warning form-control">Cancel</button>
     <button name="submitTask" type="submit" id="submitTask" class="btn btn-success form-control">Insert</button>
   {{/autoForm}}
 </template>
