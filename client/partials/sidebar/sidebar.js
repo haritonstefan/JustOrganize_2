@@ -1,5 +1,6 @@
 Template.sidebar.events({
-    "click .menu-toggle": function(event, template) {
-        $('#sidebar').toggleClass("active");
+  "click .sidebar-item": function (event, template) {
+    $('.active').removeClass('active');
+    $(event.currentTarget).addClass('active');
     }
 });

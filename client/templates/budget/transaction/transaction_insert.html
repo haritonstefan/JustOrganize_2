@@ -1,0 +1,12 @@
+<template name="transactionInsert">
+  {{#autoForm collection="Transactions" type="insert" id="insertTransaction"}}
+    <fieldset>
+      {{>afQuickField name="name" class="input-sm form-control"}}
+      {{>afQuickField name="amount" class="input-sm form-control"}}
+      {{>afQuickField name="type" options=transactionTypes class="input-sm form-control pull-right  "}}
+    </fieldset>
+    <button name="submitTransaction" type="submit" id="submitTransaction" class="btn btn-success form-control">
+      Insert
+    </button>
+  {{/autoForm}}
+</template>

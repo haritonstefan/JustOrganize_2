@@ -1,0 +1,13 @@
+<template name="transaction">
+  <div class="action-buttons pull-right">
+    <i class="fa fa-edit" name="editTransaction" id="editTransaction"></i>
+    <i class="fa fa-trash" id="deleteTransaction"></i>
+  </div>
+    {{#if editing}}
+        <div class="form-box-budget">
+            {{>transactionEdit}}
+        </div>
+    {{else}}
+        {{>transactionShow}}
+    {{/if}}
+</template>

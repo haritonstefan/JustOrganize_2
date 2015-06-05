@@ -1,16 +1,16 @@
 <template name="sidebar">
     <div class="collapse navbar-collapse navbar-ex1-collapse">
         <ul class="nav navbar-nav side-nav">
-            <li class="active">
+          <li id="dashboard" class="sidebar-item">
                 <a href="{{pathFor 'dashboard'}}"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
             </li>
-            <li>
+          <li id="budgets" class="sidebar-item">
                 <a href="{{pathFor 'budgets'}}"><i class="fa fa-fw fa-money"></i> Budgets</a>
             </li>
-            <li>
+          <li id="tasks" class="sidebar-item">
                 <a href="{{pathFor 'tasklists'}}"><i class="fa fa-fw fa-tasks"></i> Tasks</a>
             </li>
-            <li>
+          <li id="notes" class="sidebar-item">
                 <a href="{{pathFor 'notebooks'}}"><i class="fa fa-fw fa-edit"></i> Notes</a>
             </li>
         </ul>
