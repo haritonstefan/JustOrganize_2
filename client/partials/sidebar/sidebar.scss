@@ -22,7 +22,7 @@
   .side-nav li a:hover,
   .side-nav li a:focus {
     outline: none;
-    background-color: #000 !important;
+    background-color: #2c3e50 !important;
   }
 }
 
@@ -39,4 +39,15 @@
 
 .side-nav>li>ul>li>a:hover {
   color: #fff;
+}
+
+.side-nav {
+  li {
+    a{
+      font-size: 16px;
+      i {
+        color: #B2C7D2;
+      }
+    }
+  }
 }

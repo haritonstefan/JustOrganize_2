@@ -6,6 +6,10 @@ body {
   padding-right: 0;
 }
 
+.form-group {
+  margin-bottom: 0;
+}
+
 .form-control {
   border-color: #ccc;
   &:focus {
@@ -27,14 +31,20 @@ body {
 
 .task-list-box {
   display: inline-block;
-  width: 100%;
-  min-width: 200px;
+  max-width: 380px;
+  min-width: 250px;
+  height: 370px;
   border: 1px solid #ccc;
   background-color: #003872;
   border-radius: 5px;
   vertical-align: top;
   position: relative;
   margin-bottom: 10px;
+  margin-right: 10px;
+  .form-box {
+    width: 100%;
+    min-height: 100%;
+  }
   .task-btns {
     position: absolute;
     right: 20px;
@@ -63,7 +73,7 @@ body {
     }
   }
   .task-list-body {
-    height: 334px;
+    height: 300px;
     overflow: hidden;
     overflow-y: auto;
     small {
@@ -99,11 +109,12 @@ body {
 }
 
 .new-list-box {
-  max-width: 330px;
-  height: 405px;
+  max-width: 380px;
+  min-width: 250px;
+  height: 370px;
   display: inline-block;
   position: relative;
-  #new-list-button {
+  button {
     position: absolute;
     top: 50%;
     margin-top: -40px;
@@ -114,8 +125,9 @@ body {
 
 .form-box {
   display: inline-block;
-  width: 330px;
-  min-height: 405px;
+  max-width: 380px;
+  min-width: 250px;
+  height: 370px;
   vertical-align: top;
   border: 1px solid #ccc;
   padding: 20px;

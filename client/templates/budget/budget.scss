@@ -1,6 +1,7 @@
 .budget {
-  min-width: 300px;
-  width: 100%;
+  min-width: 390px;
+  max-width: 480px;
+  height: 370px;
   border: 1px solid #ddd;
   border-radius: 4px;
   background-color: #fff;
@@ -8,6 +9,11 @@
   margin-bottom: 10px;
   margin-right: 10px;
   vertical-align: top;
+  .form-box-budget {
+    height: 100%;
+    min-width: 368px;
+    margin-right: 0;
+  }
   .budget-heading {
     border-bottom: 1px solid #ddd;
     padding: 10px;
@@ -82,8 +88,9 @@
 
 .form-box-budget {
   display: inline-block;
-  width: 100%;
-  min-height: 100%;
+  min-width: 390px;
+  max-width: 480px;
+  height: 370px;
   vertical-align: top;
   border: 1px solid #ccc;
   padding: 20px;
@@ -93,15 +100,16 @@
   margin-right: 10px;
 }
 .new-budget-box {
+  min-width: 390px;
   max-width: 480px;
-  height: 378px;
+  height: 370px;
   position: relative;
   display: inline-block;
   button {
     position: absolute;
     top: 50%;
-    margin-top: -30px;
     left: 50%;
+    margin-top: -60px;
     margin-left: -60px;
   }
 }

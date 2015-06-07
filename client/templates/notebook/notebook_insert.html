@@ -1,11 +1,13 @@
 <template name="notebookInsert">
-  {{#autoForm collection="Notebooks" type="method" meteormethod="addNotebook" id="insertNotebook"}}
-    <fieldset>
-      <legend>Insert a notebook</legend>
-      {{>afQuickField name="name"}}
-      {{>afQuickField name="description"}}
-      {{>afQuickField name="main" type="boolean-select"}}
-    </fieldset>
-    <button type="submit" id="insertNotebook" class="btn btn-primary"> Create Notebook</button>
-  {{/autoForm}}
+    <div class="form-box">
+      {{#autoForm collection="Notebooks" type="method" meteormethod="addNotebook" id="insertNotebook"}}
+          <fieldset>
+              <legend>Insert a notebook</legend>
+            {{>afQuickField name="name"}}
+            {{>afQuickField name="description"}}
+            {{>afQuickField name="main" type="boolean-select"}}
+          </fieldset>
+          <button type="submit" id="insertNotebook" class="btn btn-primary btn-sm"> Create Notebook</button>
+      {{/autoForm}}
+    </div>
 </template>
