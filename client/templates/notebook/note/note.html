@@ -1,11 +1,13 @@
 <template name="note">
   <div class="new-note-box">
-    <div class="action-buttons pull-right">
+    <div class="action-buttons task-btns pull-right">
       <i class="fa fa-edit" id="edit-note-button"></i>
       <i class="fa fa-trash" id="delete-note-button"></i>
     </div>
     {{#if editing}}
-      {{>noteEdit}}
+      <div class="form-box">
+        {{>noteEdit}}
+      </div>
     {{else}}
       {{>noteShow}}
     {{/if}}

@@ -1,11 +1,11 @@
 <template name="notebookShow">
-  <div class="notebook">
-    <div class="notebook-heading">
+  <div class="todo-list">
+    <div class="task-list-heading">
       <label>
         <i class="fa fa-note"></i> {{name}}
       </label>
     </div>
-    <div class="notebook-body">
+    <div class="task-list-body">
       {{#if inserting}}
         <div class="form-box">
           {{>noteInsert}}

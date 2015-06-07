@@ -1,33 +1,33 @@
 <template name="dashboardPage">
-  <div class="container">
-    <div class="col-md-3">
-      {{#if tasklistData}}
-        {{#with tasklistData}}
-          {{>tasklist}}
-        {{/with}}
-      {{else}}
-        <p> No tasklist defined As main</p>
-      {{/if}}
-    </div>
+      <div class="row">
+          <div class="col-md-3">
+            {{#if tasklistData}}
+              {{#with tasklistData}}
+                {{>tasklist}}
+              {{/with}}
+            {{else}}
+                <p> No tasklist defined As main</p>
+            {{/if}}
+          </div>
 
-    <div class="col-md-5">
-      {{#if budgetData}}
-        {{#with budgetData}}
-          {{>budget}}
-        {{/with}}
-      {{else}}
-        <p> no budget defined as main </p>
-      {{/if}}
-    </div>
+          <div class="col-md-5">
+            {{#if budgetData}}
+              {{#with budgetData}}
+                {{>budget}}
+              {{/with}}
+            {{else}}
+                <p> no budget defined as main </p>
+            {{/if}}
+          </div>
 
-    <div class="col-md-4">
-      {{#if notebookData}}
-        {{#with notebookData}}
-          {{>notebook}}
-        {{/with}}
-      {{else}}
-        <p> no notebook defined as main </p>
-      {{/if}}
-    </div>
-  </div>
+          <div class="col-md-4">
+            {{#if notebookData}}
+              {{#with notebookData}}
+                {{>notebook}}
+              {{/with}}
+            {{else}}
+                <p> no notebook defined as main </p>
+            {{/if}}
+          </div>
+      </div>
 </template>

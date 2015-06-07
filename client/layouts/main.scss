@@ -27,8 +27,8 @@ body {
 
 .task-list-box {
   display: inline-block;
-  width: 330px;
-  min-height: 405px;
+  width: 100%;
+  min-width: 200px;
   border: 1px solid #ccc;
   background-color: #003872;
   border-radius: 5px;
@@ -99,7 +99,7 @@ body {
 }
 
 .new-list-box {
-  width: 330px;
+  max-width: 330px;
   height: 405px;
   display: inline-block;
   position: relative;
